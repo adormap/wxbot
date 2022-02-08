@@ -8,7 +8,7 @@ $api		= "5286849026:AAH_y_m55CFZMK3wHxR2sMIwox-Ub_MTzow";
 
 
 
-if(isset($text["Hi"])) {
+if($text == 'Hi') {
 	$txt = $text." Hello";
 } else {
 	$txt = $text." Other";
