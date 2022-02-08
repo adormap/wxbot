@@ -11,7 +11,7 @@ $api		= "5286849026:AAH_y_m55CFZMK3wHxR2sMIwox-Ub_MTzow";
 if($text == '/start') {
 	$msg = "Welcome to XpBot.";
 } else {
-	$msg = "<img src='https://wx.baf.mil.bd/METBSR/images/omar/RadarSingle/mtr.jpg'>";
+	$msg = "<a href='https://wx.baf.mil.bd/METBSR/images/omar/RadarSingle/mtr.jpg'><img src='https://wx.baf.mil.bd/METBSR/images/omar/RadarSingle/mtr.jpg'></a>";
 }
 
 
