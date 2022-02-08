@@ -1,32 +1,16 @@
 <?php
 
-$text    = "https://www.cpc.ncep.noaa.gov/products/precip/CWlink/MJO/ensplume_full.gif";
-$chat_id = "1398584321";
-$api     = "5286849026:AAH_y_m55CFZMK3wHxR2sMIwox-Ub_MTzow";
+$input 		= file_get_contents('php://input');
+$data  		= json_decode($input);
+$chat_id 	= $data->message->chat->id;
+$text    	= $data->message->from->text;
+$text    	= $text." Welcome To XpBot ";
 
-$url= "https://api.telegram.org/bot$api/sendMessage?chat_id=$chat_id&text=$text&pars";
+$api		= "5286849026:AAH_y_m55CFZMK3wHxR2sMIwox-Ub_MTzow";
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$result = curl_exec($ch);
-curl_close($ch);
+$url 		= "https://api.telegram.org/bot$api/sendMessage?chat_id=$chat_id&text=$text";
 
-$result = json_decode($result, true);
-
-if(isset($result['ok'])){
-
-	if(isset($result['result'])){
-		echo "Done";
-	} else {
-		echo $result['description'];
-	}
-
-} else {
-	echo "<pre>";
-	print_r($result);
-	echo "Somethings went wrong!";
-}
+file_get_contents($url);
 
 
 ?>
