@@ -8,14 +8,14 @@ $api		= "5286849026:AAH_y_m55CFZMK3wHxR2sMIwox-Ub_MTzow";
 
 
 
-if(isset($text['Hi'])) {
-	$text = $text. "Hello";
+if(isset($text["Hi"])) {
+	$txt = $text." Hello";
 } else {
-	$text = $text. "Other";
+	$txt = $text." Other";
 }
 
 
-$url 		= "https://api.telegram.org/bot$api/sendMessage?chat_id=$chat_id&text=$text";
+$url 		= "https://api.telegram.org/bot$api/sendMessage?chat_id=$chat_id&text=$txt";
 
 file_get_contents($url);
 
