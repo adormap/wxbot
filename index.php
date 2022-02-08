@@ -12,6 +12,11 @@ if($text == '/start') {
 	$msg = "Welcome to XpBot.";
 	$url = "https://api.telegram.org/bot$api/sendMessage?chat_id=$chat_id&text=$msg&parse_mode=html";
 
+} elseif ($text == '/xphelp') {
+
+	$msg = "List Of Command. %0A * For MJO send = @mjo %0A * For Radar send = @radar";
+	$url = "https://api.telegram.org/bot$api/sendMessage?chat_id=$chat_id&text=$msg&parse_mode=html";
+
 } else {
 	$img	= "https://wx.baf.mil.bd/METBSR/images/omar/Radar/202202090046.jpg";
 	$url	= "https://api.telegram.org/bot$api/sendPhoto?chat_id=1398584321&photo=$img&parse_mode=html";
